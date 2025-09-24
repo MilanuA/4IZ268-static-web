@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #3A025B;
+    --hover-color: #31034d;
+    --active-color: #8a09ca;
+    --text-color: #ffffff;
+    --separator-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media print {
+    nav {
+        display: none;
+    }
+}
+
+header {
+    background-color: var(--primary-color); 
+    padding: 40px 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.site-name {
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0;              
+    padding: 0;
+}
+
+nav li {
+    display: flex;
+    align-items: center; 
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav li + li::before {
+    content: "|";
+    color: var(--separator-color);      
+    font-weight: bold;    
+    font-size: 30px;        
+    margin: 0 15px; 
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+}
+
+nav a.active {
+    background-color: var(--active-color);
+    color: var(--text-color);
+    pointer-events: none;
+    cursor: default;
+}
+
+main {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: (--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #34495e;
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bdc3c7;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2980b9;
+    background: #ecf0f1;
+}
+
+button {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #1c5980;
+}
